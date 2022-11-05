@@ -49,11 +49,11 @@ jobs:
         rm -f configkey.txt    
     - name: Commit #上传新的refresh_token到仓库
       run: |
-        git config --global user.email zhtok@foxmail.com
+        git config --global user.email admin@madshin.my.id
         git config --global user.name MSOfficeAutoSubscribeService
         git add .
         git commit -m "Update new refresh token with MSO_E5_Dev_AutoRenew_Modified" -a
     - name: Push changes
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@main
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
